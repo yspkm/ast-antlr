@@ -1,6 +1,7 @@
 grammar Expr;
 
 // parser rules
+
 prog : (expr ';' NEWLINE?)*; 
 
 expr : expr ('*'|'/') expr  # infixExpr
