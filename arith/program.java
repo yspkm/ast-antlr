@@ -1,26 +1,20 @@
-import java.io.IOException;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.*;
 
 public class program {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws Exception {
 
-    // Get Lexer
     ExprLexer lexer = new ExprLexer(CharStreams.fromStream(System.in));
-
-    // Get a list of matched tokens
     CommonTokenStream tokens = new CommonTokenStream(lexer);
-    // Pass tokens to parser
     ExprParser parser = new ExprParser(tokens);
 
     // Make AST from prog and print the tree
-    ExprParser.ProgContext ctx = parser.prog();
-    ExprTree AST = (ExprTree) new BuildAstVisitor().visitProg(ctx);
-    AST.children.forEach(node -> new AstCall().Call(node, 0));
+    ParseTree tree = parser.prog();
 
     // Evaluate AST result
     // Evaluate Evaluator = new Evaluate();
     // AST.children.forEach(node -> System.out.println(Evaluator.evaluate(node)));
-    System.out.println("Hello, world!");
+    System.out.println(tree.toString());
   }
 }
