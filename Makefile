@@ -1,14 +1,16 @@
 JC = javac
-JFLAGS = -cp ".:src/main/java/antlr:lib/antlr-4.9.2-complete.jar" -d bin -sourcepath src/main/java/ast -sourcepath src/main/java/antlr
-
-RULE = src/main/java/antlr/Expr.g4
+JFLAGS = -cp ".:src/antlr:lib/antlr-4.9.2-complete.jar"\
+         -d bin\
+         -sourcepath src/main\
+         -sourcepath src/antlr
+RULE = src/antlr/Expr.g4
 ANTLR = java -jar lib/antlr-4.9.2-complete.jar -visitor
-SRC_DIR = src/main/java/ast
+SRC_DIR = src/main
 OUT_DIR = bin
 MAIN_CLASS = program
 
-# INPUT_FILE = input.txt
-# OUTPUT_FILE = output.txt
+# Default output file
+OUTPUT_FILE = dat/output.txt
 
 # 타겟 정의
 .PHONY: all clean run
@@ -24,6 +26,11 @@ clean:
 	@rm -rf $(OUT_DIR)
 
 run: all
-	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar" $(MAIN_CLASS)
+ifeq ($(strip $(INPUT)),)
+	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar"\
+           $(MAIN_CLASS)
+else 
+	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar"\
+           $(MAIN_CLASS) < $(INPUT)
+endif
 
-#$(INPUT_FILE) $(OUTPUT_FILE)

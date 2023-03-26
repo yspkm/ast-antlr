@@ -1,4 +1,4 @@
-// Generated from Expr.g4 by ANTLR 4.9.2
+// Generated from src/antlr/Expr.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -41,89 +41,89 @@ public interface ExprListener extends ParseTreeListener {
 	 */
 	void exitAssign(ExprParser.AssignContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code blank}
+	 * Enter a parse tree produced by the {@code eol}
 	 * labeled alternative in {@link ExprParser#stat}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlank(ExprParser.BlankContext ctx);
+	void enterEol(ExprParser.EolContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code blank}
+	 * Exit a parse tree produced by the {@code eol}
 	 * labeled alternative in {@link ExprParser#stat}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlank(ExprParser.BlankContext ctx);
+	void exitEol(ExprParser.EolContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code parens}
+	 * Enter a parse tree produced by the {@code number}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterParens(ExprParser.ParensContext ctx);
+	void enterNumber(ExprParser.NumberContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code parens}
+	 * Exit a parse tree produced by the {@code number}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitParens(ExprParser.ParensContext ctx);
+	void exitNumber(ExprParser.NumberContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code MulDiv}
+	 * Enter a parse tree produced by the {@code paren}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterMulDiv(ExprParser.MulDivContext ctx);
+	void enterParen(ExprParser.ParenContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code MulDiv}
+	 * Exit a parse tree produced by the {@code paren}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitMulDiv(ExprParser.MulDivContext ctx);
+	void exitParen(ExprParser.ParenContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code AddSub}
+	 * Enter a parse tree produced by the {@code addsub}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddSub(ExprParser.AddSubContext ctx);
+	void enterAddsub(ExprParser.AddsubContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code AddSub}
+	 * Exit a parse tree produced by the {@code addsub}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddSub(ExprParser.AddSubContext ctx);
+	void exitAddsub(ExprParser.AddsubContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Nums}
+	 * Enter a parse tree produced by the {@code fncall}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterNums(ExprParser.NumsContext ctx);
+	void enterFncall(ExprParser.FncallContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Nums}
+	 * Exit a parse tree produced by the {@code fncall}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitNums(ExprParser.NumsContext ctx);
+	void exitFncall(ExprParser.FncallContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code funcCall}
+	 * Enter a parse tree produced by the {@code varid}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterFuncCall(ExprParser.FuncCallContext ctx);
+	void enterVarid(ExprParser.VaridContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code funcCall}
+	 * Exit a parse tree produced by the {@code varid}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitFuncCall(ExprParser.FuncCallContext ctx);
+	void exitVarid(ExprParser.VaridContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code id}
+	 * Enter a parse tree produced by the {@code muldiv}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterId(ExprParser.IdContext ctx);
+	void enterMuldiv(ExprParser.MuldivContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code id}
+	 * Exit a parse tree produced by the {@code muldiv}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitId(ExprParser.IdContext ctx);
+	void exitMuldiv(ExprParser.MuldivContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ExprParser#func}.
 	 * @param ctx the parse tree
@@ -134,14 +134,4 @@ public interface ExprListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFunc(ExprParser.FuncContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ExprParser#func_name}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunc_name(ExprParser.Func_nameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ExprParser#func_name}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunc_name(ExprParser.Func_nameContext ctx);
 }

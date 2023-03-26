@@ -15,6 +15,6 @@ public class program {
     // Evaluate AST result
     // Evaluate Evaluator = new Evaluate();
     // AST.children.forEach(node -> System.out.println(Evaluator.evaluate(node)));
-    System.out.println(tree.toString());
+    System.out.println(tree.toStringTree());
   }
 }

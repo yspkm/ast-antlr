@@ -1,4 +1,4 @@
-// Generated from Expr.g4 by ANTLR 4.9.2
+// Generated from src/antlr/Expr.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -30,64 +30,58 @@ public interface ExprVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssign(ExprParser.AssignContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code blank}
+	 * Visit a parse tree produced by the {@code eol}
 	 * labeled alternative in {@link ExprParser#stat}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBlank(ExprParser.BlankContext ctx);
+	T visitEol(ExprParser.EolContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code parens}
+	 * Visit a parse tree produced by the {@code number}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParens(ExprParser.ParensContext ctx);
+	T visitNumber(ExprParser.NumberContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code MulDiv}
+	 * Visit a parse tree produced by the {@code paren}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMulDiv(ExprParser.MulDivContext ctx);
+	T visitParen(ExprParser.ParenContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code AddSub}
+	 * Visit a parse tree produced by the {@code addsub}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAddSub(ExprParser.AddSubContext ctx);
+	T visitAddsub(ExprParser.AddsubContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code Nums}
+	 * Visit a parse tree produced by the {@code fncall}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitNums(ExprParser.NumsContext ctx);
+	T visitFncall(ExprParser.FncallContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code funcCall}
+	 * Visit a parse tree produced by the {@code varid}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFuncCall(ExprParser.FuncCallContext ctx);
+	T visitVarid(ExprParser.VaridContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code id}
+	 * Visit a parse tree produced by the {@code muldiv}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitId(ExprParser.IdContext ctx);
+	T visitMuldiv(ExprParser.MuldivContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ExprParser#func}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitFunc(ExprParser.FuncContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link ExprParser#func_name}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunc_name(ExprParser.Func_nameContext ctx);
 }

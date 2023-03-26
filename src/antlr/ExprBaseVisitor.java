@@ -1,4 +1,4 @@
-// Generated from Expr.g4 by ANTLR 4.9.2
+// Generated from src/antlr/Expr.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -37,49 +37,49 @@ public class ExprBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements E
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlank(ExprParser.BlankContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEol(ExprParser.EolContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParens(ExprParser.ParensContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNumber(ExprParser.NumberContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMulDiv(ExprParser.MulDivContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParen(ExprParser.ParenContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAddSub(ExprParser.AddSubContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAddsub(ExprParser.AddsubContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNums(ExprParser.NumsContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFncall(ExprParser.FncallContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFuncCall(ExprParser.FuncCallContext ctx) { return visitChildren(ctx); }
+	@Override public T visitVarid(ExprParser.VaridContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitId(ExprParser.IdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMuldiv(ExprParser.MuldivContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -87,11 +87,4 @@ public class ExprBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements E
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitFunc(ExprParser.FuncContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitFunc_name(ExprParser.Func_nameContext ctx) { return visitChildren(ctx); }
 }

@@ -1,4 +1,4 @@
-// Generated from Expr.g4 by ANTLR 4.9.2
+// Generated from src/antlr/Expr.g4 by ANTLR 4.9.2
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -51,85 +51,85 @@ public class ExprBaseListener implements ExprListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlank(ExprParser.BlankContext ctx) { }
+	@Override public void enterEol(ExprParser.EolContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlank(ExprParser.BlankContext ctx) { }
+	@Override public void exitEol(ExprParser.EolContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParens(ExprParser.ParensContext ctx) { }
+	@Override public void enterNumber(ExprParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParens(ExprParser.ParensContext ctx) { }
+	@Override public void exitNumber(ExprParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMulDiv(ExprParser.MulDivContext ctx) { }
+	@Override public void enterParen(ExprParser.ParenContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMulDiv(ExprParser.MulDivContext ctx) { }
+	@Override public void exitParen(ExprParser.ParenContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddSub(ExprParser.AddSubContext ctx) { }
+	@Override public void enterAddsub(ExprParser.AddsubContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAddSub(ExprParser.AddSubContext ctx) { }
+	@Override public void exitAddsub(ExprParser.AddsubContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNums(ExprParser.NumsContext ctx) { }
+	@Override public void enterFncall(ExprParser.FncallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNums(ExprParser.NumsContext ctx) { }
+	@Override public void exitFncall(ExprParser.FncallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncCall(ExprParser.FuncCallContext ctx) { }
+	@Override public void enterVarid(ExprParser.VaridContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncCall(ExprParser.FuncCallContext ctx) { }
+	@Override public void exitVarid(ExprParser.VaridContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterId(ExprParser.IdContext ctx) { }
+	@Override public void enterMuldiv(ExprParser.MuldivContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitId(ExprParser.IdContext ctx) { }
+	@Override public void exitMuldiv(ExprParser.MuldivContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -142,18 +142,6 @@ public class ExprBaseListener implements ExprListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFunc(ExprParser.FuncContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFunc_name(ExprParser.Func_nameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunc_name(ExprParser.Func_nameContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
