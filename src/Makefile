@@ -26,4 +26,4 @@ run:
 	@java program
 
 clean:
-	@rm *.class *.java *.interp *.tokens
+	@rm *.class Expr*.java *.interp *.tokens

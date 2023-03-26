@@ -8,6 +8,7 @@ ANTLR = java -jar lib/antlr-4.9.2-complete.jar -visitor
 SRC_DIR = src/main
 OUT_DIR = bin
 MAIN_CLASS = program
+grun=java org.antlr.v4.gui.TestRig
 
 # Default output file
 OUTPUT_FILE = dat/output.txt
@@ -18,9 +19,9 @@ OUTPUT_FILE = dat/output.txt
 all: $(OUT_DIR)/$(MAIN_CLASS).class
 
 $(OUT_DIR)/%.class: $(SRC_DIR)/%.java
-	mkdir -p $(OUT_DIR)
-	$(ANTLR) $(RULE)
-	$(JC) $(JFLAGS) $<
+	@mkdir -p $(OUT_DIR)
+	@$(ANTLR) $(RULE)
+	@$(JC) $(JFLAGS) $< 
 
 clean:
 	@rm -rf $(OUT_DIR)

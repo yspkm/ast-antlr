@@ -23,12 +23,12 @@ public interface ExprVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitEval(ExprParser.EvalContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code assign}
+	 * Visit a parse tree produced by the {@code asg}
 	 * labeled alternative in {@link ExprParser#stat}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssign(ExprParser.AssignContext ctx);
+	T visitAsg(ExprParser.AsgContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code eol}
 	 * labeled alternative in {@link ExprParser#stat}.
@@ -44,19 +44,19 @@ public interface ExprVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNumber(ExprParser.NumberContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code paren}
+	 * Visit a parse tree produced by the {@code chunk}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParen(ExprParser.ParenContext ctx);
+	T visitChunk(ExprParser.ChunkContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code addsub}
+	 * Visit a parse tree produced by the {@code hiarith}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAddsub(ExprParser.AddsubContext ctx);
+	T visitHiarith(ExprParser.HiarithContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code fncall}
 	 * labeled alternative in {@link ExprParser#expr}.
@@ -72,16 +72,10 @@ public interface ExprVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitVarid(ExprParser.VaridContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code muldiv}
+	 * Visit a parse tree produced by the {@code loarith}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMuldiv(ExprParser.MuldivContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link ExprParser#func}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunc(ExprParser.FuncContext ctx);
+	T visitLoarith(ExprParser.LoarithContext ctx);
 }

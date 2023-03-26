@@ -12,11 +12,15 @@ public class program {
     // Make AST from prog and print the tree
     ParseTree ast = parser.prog();
 
+    AstCall print_visitor = new AstCall();
+    print_visitor.visit(ast);
+
+    //Evaluate AST result
     Evaluate evaluate_visitor = new Evaluate();
     evaluate_visitor.visit(ast);
-    // Evaluate AST result
+
     // Evaluate Evaluator = new Evaluate();
     // AST.children.forEach(node -> System.out.println(Evaluator.evaluate(node)));
-    //System.out.println(tree.toStringTree());
+    //System.out.println(ast.toStringTree());
   }
 }

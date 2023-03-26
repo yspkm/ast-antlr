@@ -30,7 +30,7 @@ public class ExprBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements E
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssign(ExprParser.AssignContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAsg(ExprParser.AsgContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -51,14 +51,14 @@ public class ExprBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements E
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParen(ExprParser.ParenContext ctx) { return visitChildren(ctx); }
+	@Override public T visitChunk(ExprParser.ChunkContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAddsub(ExprParser.AddsubContext ctx) { return visitChildren(ctx); }
+	@Override public T visitHiarith(ExprParser.HiarithContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -79,12 +79,5 @@ public class ExprBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements E
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMuldiv(ExprParser.MuldivContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitFunc(ExprParser.FuncContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLoarith(ExprParser.LoarithContext ctx) { return visitChildren(ctx); }
 }

@@ -29,17 +29,17 @@ public interface ExprListener extends ParseTreeListener {
 	 */
 	void exitEval(ExprParser.EvalContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code assign}
+	 * Enter a parse tree produced by the {@code asg}
 	 * labeled alternative in {@link ExprParser#stat}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssign(ExprParser.AssignContext ctx);
+	void enterAsg(ExprParser.AsgContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code assign}
+	 * Exit a parse tree produced by the {@code asg}
 	 * labeled alternative in {@link ExprParser#stat}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssign(ExprParser.AssignContext ctx);
+	void exitAsg(ExprParser.AsgContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code eol}
 	 * labeled alternative in {@link ExprParser#stat}.
@@ -65,29 +65,29 @@ public interface ExprListener extends ParseTreeListener {
 	 */
 	void exitNumber(ExprParser.NumberContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code paren}
+	 * Enter a parse tree produced by the {@code chunk}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterParen(ExprParser.ParenContext ctx);
+	void enterChunk(ExprParser.ChunkContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code paren}
+	 * Exit a parse tree produced by the {@code chunk}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitParen(ExprParser.ParenContext ctx);
+	void exitChunk(ExprParser.ChunkContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code addsub}
+	 * Enter a parse tree produced by the {@code hiarith}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddsub(ExprParser.AddsubContext ctx);
+	void enterHiarith(ExprParser.HiarithContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code addsub}
+	 * Exit a parse tree produced by the {@code hiarith}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddsub(ExprParser.AddsubContext ctx);
+	void exitHiarith(ExprParser.HiarithContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code fncall}
 	 * labeled alternative in {@link ExprParser#expr}.
@@ -113,25 +113,15 @@ public interface ExprListener extends ParseTreeListener {
 	 */
 	void exitVarid(ExprParser.VaridContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code muldiv}
+	 * Enter a parse tree produced by the {@code loarith}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterMuldiv(ExprParser.MuldivContext ctx);
+	void enterLoarith(ExprParser.LoarithContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code muldiv}
+	 * Exit a parse tree produced by the {@code loarith}
 	 * labeled alternative in {@link ExprParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitMuldiv(ExprParser.MuldivContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ExprParser#func}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunc(ExprParser.FuncContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ExprParser#func}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunc(ExprParser.FuncContext ctx);
+	void exitLoarith(ExprParser.LoarithContext ctx);
 }
