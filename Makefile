@@ -1,14 +1,18 @@
 JC = javac
-JFLAGS = -cp ".:src/antlr:lib/antlr-4.9.2-complete.jar"\
+JFLAGS = -cp ".:src/main/antlr:lib/antlr-4.9.2-complete.jar"\
          -d bin\
-         -sourcepath src/main\
-         -sourcepath src/antlr
-RULE = src/antlr/Expr.g4
+         -sourcepath src/main/java\
+         -sourcepath src/main/antlr
+RULE = src/main/antlr/Expr.g4
 ANTLR = java -jar lib/antlr-4.9.2-complete.jar -visitor
-SRC_DIR = src/main
+SRC_DIR = src/main/java
 OUT_DIR = bin
-MAIN_CLASS = program
-grun=java org.antlr.v4.gui.TestRig
+MAIN_CLASS = Main
+
+# Allow the input file to be specified on the command line
+ifeq ($(strip $(INPUT)),)
+  INPUT :=
+endif
 
 # Default output file
 OUTPUT_FILE = dat/output.txt
@@ -28,10 +32,7 @@ clean:
 
 run: all
 ifeq ($(strip $(INPUT)),)
-	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar"\
-           $(MAIN_CLASS)
-else 
-	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar"\
-           $(MAIN_CLASS) < $(INPUT)
+	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar" $(MAIN_CLASS)
+else
+	@java -cp "$(OUT_DIR):lib/antlr-4.9.2-complete.jar" $(MAIN_CLASS) < $(INPUT)
 endif
-

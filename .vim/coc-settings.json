@@ -1,6 +1,6 @@
 {
 
   "coc.preferences.formatOnSaveFiletypes": "java",
-  "java.project.sourcePaths": ["src/main", "src/antlr"],
+  "java.project.sourcePaths": ["src/main/java", "src/main/antlr"],
   "java.project.classPaths": ["lib/*jar", "bin/*class"]
 }

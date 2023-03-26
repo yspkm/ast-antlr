@@ -11,16 +11,15 @@ stat:
   ;
 
 expr:                        
-  expr id=('*'|'/') expr                          # hiarith
-  | expr id=('+'|'-') expr                        # loarith 
-  | NUMS                                          # number 
-  | id=FUNC_ID WC* '('WC* NUMS (',' WC* NUMS)* ')'   # fncall
-  | VAR_ID                                        # varid 
-  | '(' expr ')'                                  # chunk
+  expr id=('*'|'/') expr                         # hiarith
+  | expr id=('+'|'-') expr                       # loarith 
+  | NUMS                                         # number 
+  | id=('min'|'max'|'pow'|'sqrt') WC* 
+      '(' WC* expr WC* (',' WC* expr WC*)* ')'   # fncall
+  | VAR_ID                                       # varid 
+  | '(' expr ')'                                 # chunk
   ;
 
-FUNC_ID: 
-  MIN | MAX | POW | SQRT;
 MIN     : 'min';
 MAX     : 'max';
 POW     : 'pow';

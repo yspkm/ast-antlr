@@ -1,6 +1,6 @@
 JC = javac
 src = *.java
-target = program
+target = Main 
 antlr4=java -jar /usr/local/lib/antlr-complete.jar
 grun=java org.antlr.v4.gui.TestRig
 grammar='Expr.g4'
@@ -23,7 +23,7 @@ tokens:
 	@$(grun) Expr prog -tokens
 
 run:
-	@java program
+	@java $(target) 
 
 clean:
 	@rm *.class Expr*.java *.interp *.tokens

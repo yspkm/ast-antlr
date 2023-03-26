@@ -1,5 +1,8 @@
-public class AstCall extends ExprBaseVisitor<Double> {
-  int tab_cnt=0;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.*;
+
+public class AstPrinter extends ExprBaseVisitor<Double> {
+  Integer tab_cnt = 0;
 
   private void printTabs(){
     for (int i = 0; i < this.tab_cnt; i++){

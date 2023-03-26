@@ -1,8 +1,12 @@
 import java.util.HashMap;
 import java.lang.Math;
 
-public class Evaluate extends ExprBaseVisitor<Double> {
-  HashMap<String, Double> var_map = new HashMap<String, Double>();
+public class AstEvaluator extends ExprBaseVisitor<Double> {
+  HashMap<String, Double> var_map;
+
+  public AstEvaluator(){
+    this.var_map = new HashMap<String, Double>();
+  }
 
   @Override
   public Double visitAsg(ExprParser.AsgContext cur){
@@ -92,27 +96,3 @@ public class Evaluate extends ExprBaseVisitor<Double> {
   return ret;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
